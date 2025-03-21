@@ -20,8 +20,8 @@ Container::Container(QWidget *parent)
     player->setAudioOutput(audioOutput);
 
     videoWidget->show();
-    videoWidget->setGeometry(10,80,771,441);
-    this->setGeometry(0,0,800,534);
+    // videoWidget->setGeometry(10,80,771,441);
+    // this->setGeometry(0,0,800,534);
 
     updateSettings();
 
@@ -119,6 +119,6 @@ QString Container::formatDuration(qint64 progress, bool usems) {
 void Container::run()
 {
     // if(settings.value("AutoBegin").toBool() && player->mediaStatus() == QMediaPlayer::LoadedMedia) player->play();
-    // videoWidget->setFullScreen(true);
+    videoWidget->setFullScreen(true);
     // videoWidget->showMaximized();
 }
