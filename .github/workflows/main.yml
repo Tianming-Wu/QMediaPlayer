@@ -49,8 +49,6 @@ jobs:
 
       - name: Package
         run: |
-          cp autorun.reg build/Release/
-          cp autorun_registry.bat build/Release/
           cd build/Release
           powershell Compress-Archive -Path * -DestinationPath ../../QMediaPlayer-Windows-${{ env.VERSION }}-x86_64.zip
         shell: pwsh
